@@ -7,6 +7,10 @@ const app = express();
 connectDB();
 // Middleware
 app.use(cors());
+app.use(express.json());
+
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/shops', require('./routes/shopRoutes'));
 
 // Start the server
 const PORT = process.env.PORT || 4000;
