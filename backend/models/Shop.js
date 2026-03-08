@@ -29,9 +29,11 @@ const shopSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
-    addressLine2: {
-      type: String,
+    adharcardNo: {
+      type: Number,
+      size:12,
       trim: true,
+      required: true,
     },
     city: {
       type: String,

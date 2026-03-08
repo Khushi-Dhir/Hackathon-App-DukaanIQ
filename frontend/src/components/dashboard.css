@@ -1,0 +1,83 @@
+.main-content{
+  padding:30px;
+  flex:1;
+}
+
+/* Shop Card */
+
+.shop-card{
+  background:#ffffff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+  margin-bottom:25px;
+}
+
+.shop-card h2{
+  margin:0;
+  color:#2c3e50;
+}
+
+.shop-card p{
+  color:#777;
+}
+
+/* Stats */
+
+.stats-container{
+  display:flex;
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.stat-box{
+  flex:1;
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.stat-box h3{
+  font-size:28px;
+  margin:0;
+  color:#3498db;
+}
+
+/* Table */
+
+.table-section{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+  margin-bottom:30px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+  text-align:left;
+}
+
+/* Alerts */
+
+.alerts{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.alert-box{
+  padding:10px;
+  background:#fff3cd;
+  margin-top:10px;
+  border-radius:6px;
+}

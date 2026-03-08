@@ -1,10 +1,10 @@
 const express = require('express');
-const { registerShop } = require('../controllers/shopController');
+const { getInventoryAnalytics } = require('../controllers/inventoryController');
 const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
-router.post('/register', authMiddleware, registerShop);
+router.get('/analytics', authMiddleware, getInventoryAnalytics);
 
 module.exports = router;
 

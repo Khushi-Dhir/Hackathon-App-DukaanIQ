@@ -1,6 +1,5 @@
 const Shop = require('../models/Shop');
 
-// POST /api/shops/register
 const registerShop = async (req, res) => {
   try {
     const {
@@ -9,7 +8,7 @@ const registerShop = async (req, res) => {
       licenseNo,
       gst,
       addressLine1,
-      addressLine2,
+      adharcardNo,
       city,
       state,
       pincode,
@@ -27,6 +26,7 @@ const registerShop = async (req, res) => {
     if (shopType === 'Pharma' && !licenseNo) {
       return res.status(400).json({ message: 'licenseNo is mandatory for Pharma shops' });
     }
+   
 
     const shop = await Shop.create({
       name,
@@ -35,13 +35,13 @@ const registerShop = async (req, res) => {
       licenseNo,
       gst,
       addressLine1,
-      addressLine2,
+      adharcardNo,
       city,
       state,
       pincode,
       contactNumber,
-      status: 'Pending',
-      verifyType: 'Basic',
+      status: (gst || licenseNo) ? 'Pending': "Approved",
+      verifyType: (gst || licenseNo) ?"Advanced" :'Basic' ,
     });
 
     return res.status(201).json({

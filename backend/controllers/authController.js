@@ -15,7 +15,6 @@ const generateToken = (user) => {
   );
 };
 
-// POST /api/auth/signup
 const signup = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -55,11 +54,10 @@ const signup = async (req, res) => {
   }
 };
 
-// POST /api/auth/login
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-
+    console.log(email,password);
     if (!email || !password) {
       return res.status(400).json({ message: 'Email and password are required' });
     }
